@@ -1,13 +1,13 @@
-def insertion_sort collection
-  return collection if collection.size < 2
-  (1..collection.size-1).each do |j|
-    key = collection[j]
-    i = j - 1
-    while i >= 0 and collection[i] > key do
-      collection[i+1] = collection[i]
-      i -= 1
+def insertion_sort container
+  return container if container.size < 2
+  (1..container.size-1).each do |ind|
+    value = container[ind]
+    prev_ind = ind - 1
+    while prev_ind >= 0 and container[prev_ind] > value do
+      container[prev_ind + 1] = container[prev_ind]
+      prev_ind -= 1
     end
-    collection[i+1] = key
+    container[prev_ind + 1] = value
   end
-  collection
+  container
 end
