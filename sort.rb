@@ -9,8 +9,6 @@ def show container
 end
 
 array = [2, 3, 5, 4, 1, 9, 8, 7]
-
 array = insertion_sort array
-
 show array
 
